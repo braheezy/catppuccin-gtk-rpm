@@ -1,14 +1,24 @@
 # Catppuccin GTK RPM
-RPM build of the great content produced by https://github.com/catppuccin/gtk.
+RPM build of the great theme produced by https://github.com/catppuccin/gtk.
 
-For each main color, an RPM is generated containing all the assets. Installing the RPM puts the theme in `/usr/share/themes/`.
+Installing the RPM puts the theme in `/usr/share/themes/`.
+
+- catppuccin-gtk (All the colors!)
+- catppuccin-gtk-blue
+- catppuccin-gtk-green
+- catppuccin-gtk-orange
+- catppuccin-gtk-pink
+- catppuccin-gtk-purple
+- catppuccin-gtk-red
+- catppuccin-gtk-teal
+- catppuccin-gtk-yellow
 
 # Build
 Install the RPM build tools for your distro:
 - `rpm-build`
 - `rpmdevtools`
 
-The GTK themes depend on the following. Install them for your distro:
+The themes have dependencies themselves. Install it for your distro:
 - `sassc`
 
 Now issue the build command:
@@ -16,6 +26,7 @@ Now issue the build command:
     make rpm
 
 # Usage
+After installing an RPM, start using the theme:
 1. Install the tools that allow you to customize the theme:
 
         yum install gnome-tweaks gnome-extensions-app gnome-shell-extension-user-theme
