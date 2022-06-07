@@ -26,12 +26,12 @@ Now issue the build command:
     make rpm
 
 # Usage
-After installing an RPM, start using the theme:
+After installing an RPM, start using the theme. This has only been tested on GNOME 41 so YMMV:
 1. Install the tools that allow you to customize the theme:
 
         yum install gnome-tweaks gnome-extensions-app gnome-shell-extension-user-theme
 
-2. Log out/back in. TBD why this is needed, but it updates the GNOME Extensions app to see the extension just installed.
+2. Log out/back in. TBD why this is needed, but it updates the GNOME Extensions app to see the `user-theme` extension just installed.
 3. Open GNOME Extensions app and toggle the button to allow **User Themes**.
 4. Open GNOME Tweaks app and under the **Appearance** tab, update the **Applications** Theme and **Shell** Theme to the one you just installed.
 5. Enjoy Catppuccin GTK :)
