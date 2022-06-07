@@ -3,7 +3,7 @@
 # *********************************************************
 NAME            := catppuccin-gtk
 VERSION         := 0.1.4
-RELEASE         := 1
+RELEASE         := 2
 GIT_TAG         := update_23_02_2022
 ROOT_DIR        := $(shell pwd)
 RPM_BUILDDIR    := $(ROOT_DIR)/rpmbuild

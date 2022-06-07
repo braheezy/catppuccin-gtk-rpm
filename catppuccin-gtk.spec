@@ -101,6 +101,16 @@ cp -r %{_builddir}/%{_name}-red/* $INSTALL_DIR
 cp -r %{_builddir}/%{_name}-teal/* $INSTALL_DIR
 cp -r %{_builddir}/%{_name}-yellow/* $INSTALL_DIR
 
+%files
+/usr/share/themes/Catppuccin-blue*
+/usr/share/themes/Catppuccin-green*
+/usr/share/themes/Catppuccin-orange*
+/usr/share/themes/Catppuccin-pink*
+/usr/share/themes/Catppuccin-purple*
+/usr/share/themes/Catppuccin-red*
+/usr/share/themes/Catppuccin-teal*
+/usr/share/themes/Catppuccin-yellow*
+
 %files blue
 /usr/share/themes/Catppuccin-blue*
 
@@ -126,5 +136,7 @@ cp -r %{_builddir}/%{_name}-yellow/* $INSTALL_DIR
 /usr/share/themes/Catppuccin-yellow*
 
 %changelog
+* Sat Apr 16 2022 braheezy <https://github.com/mbraha/>
+- Add build for RPM including all colors
 * Sat Apr 16 2022 braheezy <https://github.com/mbraha/>
 - Initial specfile
