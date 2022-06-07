@@ -51,7 +51,7 @@ clean:
 clean_all:
 	@echo -e "${GREEN}Deleting:${END} $(RPM_BUILDDIR)"
 	@rm -rf $(RPM_BUILDDIR)
-	@echo -e ${GREEN}Deleting:${END} $(RPM_FILES)"
+	@echo -e "${GREEN}Deleting:${END} $(RPM_FILES)"
 	@rm -rf $(RPM_FILES)
 
 rpm: $(RPM_FILES)
