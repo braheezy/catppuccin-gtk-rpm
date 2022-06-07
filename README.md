@@ -1,17 +1,17 @@
 # Catppuccin GTK RPM
 RPM build of the great theme produced by https://github.com/catppuccin/gtk.
 
-Installing the RPM puts the theme in `/usr/share/themes/`.
+Installing the RPM puts the theme in `/usr/share/themes/`. Available RPMs:
 
-- catppuccin-gtk (All the colors!)
-- catppuccin-gtk-blue
-- catppuccin-gtk-green
-- catppuccin-gtk-orange
-- catppuccin-gtk-pink
-- catppuccin-gtk-purple
-- catppuccin-gtk-red
-- catppuccin-gtk-teal
-- catppuccin-gtk-yellow
+- `catppuccin-gtk` (All the colors!)
+- `catppuccin-gtk-blue`
+- `catppuccin-gtk-green`
+- `catppuccin-gtk-orange`
+- `catppuccin-gtk-pink`
+- `catppuccin-gtk-purple`
+- `catppuccin-gtk-red`
+- `catppuccin-gtk-teal`
+- `catppuccin-gtk-yellow`
 
 # Build
 Install the RPM build tools for your distro:
