@@ -74,7 +74,7 @@ Requires:       %{REQUIRES}
 Catppuccin Yellow GTK theme
 
 %prep
-# Abuse the %setup macro and unzip all the sources cleanly.
+# (Ab)use the %setup macro and unzip all the sources cleanly.
 %setup -q -c -n %{_name}-blue
 %setup -T -D -a 1 -q -c -n %{_name}-green
 %setup -T -D -a 2 -q -c -n %{_name}-orange

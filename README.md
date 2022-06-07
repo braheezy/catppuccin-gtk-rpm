@@ -3,12 +3,10 @@ RPM build of the great content produced by https://github.com/catppuccin/gtk.
 
 For each main color, an RPM is generated containing all the assets. Installing the RPM puts the theme in `/usr/share/themes/`.
 
-This has only been tested on Fedora 35 and will probably only work for modern RPM-based distros like that.
-
 # Build
-The following tools are used to produced the RPM. Install them for your distro:
+Install the RPM build tools for your distro:
 - `rpm-build`
-- `rpmdevtools` for `spectool`
+- `rpmdevtools`
 
 The GTK themes depend on the following. Install them for your distro:
 - `sassc`
