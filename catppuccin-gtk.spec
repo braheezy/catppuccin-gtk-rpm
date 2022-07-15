@@ -2,13 +2,14 @@
 %global url https://github.com/catppuccin/gtk
 %global SUMMARY Catppuccin theme inspired by the Colloid theme made by Vinceliuice
 # Per upstream docs, these packages are required
-%global REQUIRES gtk-murrine-engine, gtk3 >= 3.20, gnome-themes-extra
+%global REQUIRES gtk-murrine-engine, gtk3 >= 3.20, gnome-themes-extra, glib2-devel
 
 Name:           %{_name}
 Version:        %{_version}
 Release:        %{_release}%{?dist}
 Summary:        %{SUMMARY}
 
+# Upstream uses GPL-3 :(
 License:        GPL-3.0
 URL:            %{url}
 Source0:        %{url}/releases/download/%{_gittag}/Catppuccin-blue.zip
@@ -19,6 +20,7 @@ Source4:        %{url}/releases/download/%{_gittag}/Catppuccin-purple.zip
 Source5:        %{url}/releases/download/%{_gittag}/Catppuccin-red.zip
 Source6:        %{url}/releases/download/%{_gittag}/Catppuccin-teal.zip
 Source7:        %{url}/releases/download/%{_gittag}/Catppuccin-yellow.zip
+Source8:        gnome-shell-theme.gresource.xml
 BuildArch:      noarch
 BuildRequires:  sassc
 
@@ -74,7 +76,7 @@ Requires:       %{REQUIRES}
 Catppuccin Yellow GTK theme
 
 %prep
-# Abuse the %setup macro and unzip all the sources cleanly.
+# (Ab)use the %setup macro and unzip all the sources cleanly.
 %setup -q -c -n %{_name}-blue
 %setup -T -D -a 1 -q -c -n %{_name}-green
 %setup -T -D -a 2 -q -c -n %{_name}-orange
@@ -88,18 +90,41 @@ Catppuccin Yellow GTK theme
 # no build required
 
 %install
-INSTALL_DIR=%{buildroot}%{_datadir}/themes/
+INSTALL_DIR=%{buildroot}%{_datadir}/themes
 
 install --mode 755 --directory $INSTALL_DIR
 # Install each color
-cp -r %{_builddir}/%{_name}-blue/* $INSTALL_DIR
-cp -r %{_builddir}/%{_name}-green/* $INSTALL_DIR
-cp -r %{_builddir}/%{_name}-orange/* $INSTALL_DIR
-cp -r %{_builddir}/%{_name}-pink/* $INSTALL_DIR
-cp -r %{_builddir}/%{_name}-purple/* $INSTALL_DIR
-cp -r %{_builddir}/%{_name}-red/* $INSTALL_DIR
-cp -r %{_builddir}/%{_name}-teal/* $INSTALL_DIR
-cp -r %{_builddir}/%{_name}-yellow/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-blue/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-green/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-orange/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-pink/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-purple/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-red/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-teal/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-yellow/* $INSTALL_DIR
+
+# Install file that allows theme to apply to GDM
+# TODO: This is too hacky
+GDM_THEME_FILE=%{_sourcedir}/gnome-shell-theme.gresource.xml
+
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-blue/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-green/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-orange/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-pink/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-purple/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-red/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-teal/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-yellow/gnome-shell/
+
+%files
+/usr/share/themes/Catppuccin-blue*
+/usr/share/themes/Catppuccin-green*
+/usr/share/themes/Catppuccin-orange*
+/usr/share/themes/Catppuccin-pink*
+/usr/share/themes/Catppuccin-purple*
+/usr/share/themes/Catppuccin-red*
+/usr/share/themes/Catppuccin-teal*
+/usr/share/themes/Catppuccin-yellow*
 
 %files blue
 /usr/share/themes/Catppuccin-blue*
@@ -126,5 +151,7 @@ cp -r %{_builddir}/%{_name}-yellow/* $INSTALL_DIR
 /usr/share/themes/Catppuccin-yellow*
 
 %changelog
+* Sat Apr 16 2022 braheezy <https://github.com/mbraha/>
+- Add build for RPM including all colors
 * Sat Apr 16 2022 braheezy <https://github.com/mbraha/>
 - Initial specfile
