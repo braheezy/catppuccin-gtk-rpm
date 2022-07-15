@@ -36,17 +36,17 @@ After installing an RPM, start using the theme. This has only been tested on GNO
 4. Open GNOME Tweaks app and under the **Appearance** tab, update the **Applications** Theme and **Shell** Theme to the one you just installed.
 5. Enjoy Catppuccin GTK :)
 6. Bonus: Apply the theme to GDM too
-    - Backup current theme file
-        ```bash
+  - Backup current theme file
+      ```bash
           sudo cp -av /usr/share/gnome-shell/gnome-shell-theme.gresource{,~}
-        ```
-    - Compile new theme:
-       ```bash
-        THEME_NAME="$(gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g")"
-        THEME_SRC_DIR="/usr/share/themes/$THEME_NAME/gnome-shell"
-        sudo glib-compile-resources --target="/usr/share/gnome-shell/gnome-shell-theme.gresource" --sourcedir="$THEME_SRC_DIR" "$THEME_SRC_DIR/gnome-shell-theme.gresource.xml"
-        ```
-    - Log out/in
+      ```
+  - Compile new theme:
+      ```bash
+      THEME_NAME="$(gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g")"
+      THEME_SRC_DIR="/usr/share/themes/$THEME_NAME/gnome-shell"
+      sudo glib-compile-resources --target="/usr/share/gnome-shell/gnome-shell-theme.gresource" --sourcedir="$THEME_SRC_DIR" "$THEME_SRC_DIR/gnome-shell-theme.gresource.xml"
+      ```
+  - Log out/in
 7. More bonus: Change the GDM logo
   - Get an icon file that's 256x256 or smaller. Put it in `/usr/share/pixmaps/`. You can use `cat.png` from this project.
   - Create new file for the `gdm` user's dconf settings. Make sure it has this content:
