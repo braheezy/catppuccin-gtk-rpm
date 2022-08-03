@@ -2,9 +2,9 @@
 #                    RPM Build
 # *********************************************************
 NAME            := catppuccin-gtk
-VERSION         := 0.1.4
-RELEASE         := 2
-GIT_TAG         := update_23_02_2022
+VERSION         := 0.2.5
+RELEASE         := 1
+GIT_TAG         := v-0.2.5
 ROOT_DIR        := $(shell pwd)
 RPM_BUILDDIR    := $(ROOT_DIR)/rpmbuild
 RPM_BUILD_FLAGS := --define "_release $(RELEASE)" --define "_version $(VERSION)" --define "_gittag $(GIT_TAG)"
@@ -46,6 +46,7 @@ $(RPM_FILES): $(RPM_SOURCE)
 	@rpmbuild --quiet -bb $(RPM_BUILD_FLAGS) $(RPM_SPECFILE)
 	@mkdir -p $(ROOT_DIR)/RPMS
 	@cp -r $(RPM_BUILDDIR)/RPMS/noarch/*.rpm $(ROOT_DIR)/RPMS/
+	@chmod 744 $(ROOT_DIR)/RPMS/*
 
 clean:
 	@echo -e "${GREEN}Deleting:${END} $(RPM_BUILDDIR)"

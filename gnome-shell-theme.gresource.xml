@@ -19,5 +19,10 @@
     <file>assets/no-notifications.svg</file>
     <file>assets/toggle-off.svg</file>
     <file>assets/calendar-today.svg</file>
+    <file>assets/checkbox-dark.svg</file>
+    <file>assets/toggle-on-dark.svg</file>
+    <file>assets/checkbox-off-active.svg</file>
+    <file>assets/checkbox-off-hover.svg</file>
+    <file>assets/calendar-today.svg</file>
   </gresource>
 </gresources>
