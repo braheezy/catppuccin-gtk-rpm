@@ -23,6 +23,5 @@
     <file>assets/toggle-on-dark.svg</file>
     <file>assets/checkbox-off-active.svg</file>
     <file>assets/checkbox-off-hover.svg</file>
-    <file>assets/calendar-today.svg</file>
   </gresource>
 </gresources>
