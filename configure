@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo dnf update -y
-sudo dnf install -y rpm-build rpmlint rpmdevtools dnf-utils
+dnf update -y
+dnf install -y rpm-build rpmlint rpmdevtools dnf-utils
