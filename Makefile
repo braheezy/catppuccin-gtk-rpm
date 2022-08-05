@@ -18,7 +18,7 @@ ORANGE = \e[0;33m
 GREEN = \e[0;32m
 END = \e[0m
 
-.PHONY: clean clean_all help
+.PHONY: clean clean_all help rpm
 
 define help_text
 Targets:
@@ -37,6 +37,7 @@ $(RPM_SOURCE): $(GDM_FILE)
 	@echo -e "${ORANGE}Downloading source files...${END}"
 	@mkdir -p $(RPM_BUILDDIR)/SOURCES
 	@spectool --sourcedir --get-files $(RPM_BUILD_FLAGS) $(RPM_SPECFILE) >/dev/null
+	@yum-builddep --assumeyes $(RPM_SPECFILE)
 	@cp $(GDM_FILE) $(RPM_BUILDDIR)/SOURCES/$(GDM_FILE)
 
 # Build the RPM.
