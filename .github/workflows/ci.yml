@@ -9,5 +9,5 @@ on:
       - synchronize
 
 jobs:
-  build:
+  build-job:
     uses: ./.github/workflows/build.yml

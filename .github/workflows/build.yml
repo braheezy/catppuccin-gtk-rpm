@@ -1,4 +1,4 @@
-name: Build
+name: rpm
 
 on:
   workflow_call:
@@ -9,7 +9,7 @@ on:
         type: boolean
 
 jobs:
-  build:
+  build-job:
 
     runs-on: ubuntu-latest
     container: fedora:latest

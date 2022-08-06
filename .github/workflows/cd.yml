@@ -8,12 +8,14 @@ on:
 
 jobs:
 
-  build:
+  build-job:
     uses: ./.github/workflows/build.yml
     with:
       upload: true
 
-  release:
+  release-job:
+    needs: build-job
+
     runs-on: ubuntu-latest
 
     steps:
