@@ -36,8 +36,8 @@ help:
 $(RPM_SOURCE): $(GDM_FILE)
 	@echo -e "${ORANGE}Downloading source files...${END}"
 	@mkdir -p $(RPM_BUILDDIR)/SOURCES
-	@spectool --sourcedir --get-files $(RPM_BUILD_FLAGS) $(RPM_SPECFILE) >/dev/null
-	@yum-builddep --assumeyes $(RPM_SPECFILE)
+	@spectool --sourcedir --get-files $(RPM_BUILD_FLAGS) $(RPM_SPECFILE) &>/dev/null
+	@dnf builddep --assumeyes --quiet $(RPM_SPECFILE)
 	@cp $(GDM_FILE) $(RPM_BUILDDIR)/SOURCES/$(GDM_FILE)
 
 # Build the RPM.

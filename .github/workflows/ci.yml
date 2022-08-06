@@ -2,9 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: master
   pull_request:
-    branches: [ "master" ]
+    types:
+      - ready_for_review
+      - synchronize
 
 jobs:
   build:
@@ -20,3 +22,8 @@ jobs:
 
     - name: Build
       run: make rpm
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: RPMS
+        path: ./RPMS/
