@@ -6,7 +6,7 @@ on:
       upload:
         description: Whether or not to upload the finished build
         required: false
-        type: bool
+        type: boolean
 
 jobs:
   build:
