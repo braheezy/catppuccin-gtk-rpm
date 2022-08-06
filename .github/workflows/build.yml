@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      upload:
+        description: Whether or not to upload the finished build
+        required: false
+        type: bool
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container: fedora:latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Configure
+      run: sudo sh ./configure
+
+    - name: Build
+      run: make rpm
+
+    - name: Upload
+      if: inputs.upload
+      uses: actions/upload-artifact@v3
+      with:
+        name: RPMS
+        path: ./RPMS/

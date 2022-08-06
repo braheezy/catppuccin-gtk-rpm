@@ -7,6 +7,12 @@ on:
     # tags: "v*.*.*"
 
 jobs:
+
+  build:
+    uses: ./.github/workflows/build.yml
+    with:
+      upload: true
+
   release:
     runs-on: ubuntu-latest
 
