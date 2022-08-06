@@ -1,19 +1,22 @@
 name: CD
 
 on:
-  workflow_run:
-    workflows: ["CI"]
-    branches: master
-    # tags: "v*.*.*"
+  # Only run CD when a new tag is created.
+  push:
+    tags: "v*.*.*"
 
 jobs:
 
+  # Re-use the build workflow to make a new build.
   build-job:
     uses: ./.github/workflows/build.yml
     with:
+      # Remember to upload the built artifacts
       upload: true
 
+  # Separate job for release!
   release-job:
+    # Don't run until the build job succeeds
     needs: build-job
 
     runs-on: ubuntu-latest
@@ -27,6 +30,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: "*.rpm"
-          body: Test release please delete me
-          draft: true
-          name: test1
+          generate_release_notes: true
