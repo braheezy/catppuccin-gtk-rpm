@@ -5,6 +5,8 @@ runs:
   steps:
     - name: Configure
       run: sudo sh ./configure
+      shell: bash
 
     - name: Build
       run: make rpm
+      shell: bash
