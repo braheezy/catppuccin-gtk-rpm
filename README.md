@@ -1,27 +1,24 @@
 # Catppuccin GTK RPM
 RPM build of the great theme produced by https://github.com/catppuccin/gtk.
 
-Installing the RPM puts the theme in `/usr/share/themes/`. Available RPMs:
+Installing the RPM puts the theme in `/usr/share/themes/`. Available RPMs can be found in in [Releases](https://github.com/braheezy/prettybox-catppuccin/releases):
 
-- `catppuccin-gtk` (All the colors!)
-- `catppuccin-gtk-blue`
-- `catppuccin-gtk-green`
-- `catppuccin-gtk-orange`
-- `catppuccin-gtk-pink`
-- `catppuccin-gtk-purple`
-- `catppuccin-gtk-red`
-- `catppuccin-gtk-teal`
-- `catppuccin-gtk-yellow`
+- `catppuccin-gtk` (All the flavors and colors!)
+- `catppuccin-gtk-Frappe`
+- `catppuccin-gtk-Frappe-<specific color>`
+- `catppuccin-gtk-Mocha`
+- `catppuccin-gtk-Mocha-<specific color>`
+- `catppuccin-gtk-Macchiato`
+- `catppuccin-gtk-Macchiato-<specific color>`
+- `catppuccin-gtk-Latte`
+- `catppuccin-gtk-Latte-<specific color>`
 
 # Build
-Install the RPM build tools for your distro:
-- `rpm-build`
-- `rpmdevtools`
+To build the RPMs yourself, you need a Linux distro that uses RPMs.
 
-The themes have dependencies themselves. Install it for your distro:
-- `sassc`
+Run `configure.sh` to install prerequisite build tools.
 
-Now issue the build command:
+Then issue the build command:
 
     make rpm
 
@@ -35,7 +32,7 @@ After installing an RPM, start using the theme. This has only been tested on GNO
 3. Open GNOME Extensions app and toggle the button to allow **User Themes**.
 4. Open GNOME Tweaks app and under the **Appearance** tab, update the **Applications** Theme and **Shell** Theme to the one you just installed.
 5. Enjoy Catppuccin GTK :)
-6. Bonus: Apply the theme to GDM too
+6. Bonus: Apply the theme to GDM too. The following steps are in `install-gdm-theme.sh` too.
   - Backup current theme file
       ```bash
           sudo cp -av /usr/share/gnome-shell/gnome-shell-theme.gresource{,~}
