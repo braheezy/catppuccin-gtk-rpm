@@ -8,7 +8,7 @@ on:
 jobs:
 
   # Re-use the build workflow to make a new build.
-  build-job:
+  build:
     uses: ./.github/workflows/build.yml
     with:
       # Remember to upload the built artifacts
@@ -21,9 +21,9 @@ jobs:
         path: ./RPMS/
 
   # Separate job for release!
-  release-job:
+  release:
     # Don't run until the build job succeeds
-    needs: build-job
+    needs: build
 
     runs-on: ubuntu-latest
 
