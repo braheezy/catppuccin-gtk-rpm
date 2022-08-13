@@ -13,6 +13,8 @@ jobs:
   # Re-use the build workflow to make a new build.
   build:
     runs-on: ubuntu-latest
+    container:
+      image: fedora:latest
 
     steps:
       - uses: actions/checkout@v3
