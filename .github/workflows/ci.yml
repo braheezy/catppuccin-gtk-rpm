@@ -7,7 +7,6 @@ on:
 
 jobs:
 
-  # Re-use the build workflow to make a new build.
   build:
     runs-on: ubuntu-latest
     container:
@@ -22,21 +21,3 @@ jobs:
         with:
           name: RPMS
           path: ./RPMS/
-
-  # Separate job for release!
-  release:
-    # Don't run until the build job succeeds
-    needs: build
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: RPMS
-
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: "*.rpm"
-          generate_release_notes: true

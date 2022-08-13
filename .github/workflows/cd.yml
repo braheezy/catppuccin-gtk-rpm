@@ -1,7 +1,6 @@
 name: Add rpms to Releases
 
 on:
-  # Only run when a new tag is created.
   push:
     branches:
       - master
@@ -10,7 +9,6 @@ on:
 
 jobs:
 
-  # Re-use the build workflow to make a new build.
   build:
     runs-on: ubuntu-latest
     container:
@@ -26,8 +24,8 @@ jobs:
           name: RPMS
           path: ./RPMS/
 
-  # Separate job for release!
   release:
+    if: startsWith(github.ref, 'refs/tags/v')
     # Don't run until the build job succeeds
     needs: build
 
