@@ -1,0 +1,10 @@
+name: Build RPM
+
+runs:
+  using: "composite"
+  steps:
+    - name: Configure
+      run: sudo sh ./configure
+
+    - name: Build
+      run: make rpm
