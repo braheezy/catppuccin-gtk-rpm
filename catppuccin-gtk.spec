@@ -30,9 +30,26 @@ Source14:       %{url}/releases/download/%{_gittag}/Catppuccin-Mocha-Pink.zip
 Source15:       %{url}/releases/download/%{_gittag}/Catppuccin-Mocha-Red.zip
 Source16:       %{url}/releases/download/%{_gittag}/Catppuccin-Mocha-Teal.zip
 Source17:       %{url}/releases/download/%{_gittag}/Catppuccin-Mocha-Yellow.zip
-Source18:       gnome-shell-theme.gresource.xml
+Source18:        %{url}/releases/download/%{_gittag}/Catppuccin-Macchiato-Green.zip
+Source19:       %{url}/releases/download/%{_gittag}/Catppuccin-Macchiato-Grey.zip
+# Source11:       %{url}/releases/download/%{_gittag}/Catppuccin-Macchiato-Lavender.zip
+Source20:       %{url}/releases/download/%{_gittag}/Catppuccin-Macchiato-Mauve.zip
+# Source13:       %{url}/releases/download/%{_gittag}/Catppuccin-Macchiato-Peach.zip
+Source21:       %{url}/releases/download/%{_gittag}/Catppuccin-Macchiato-Pink.zip
+Source22:       %{url}/releases/download/%{_gittag}/Catppuccin-Macchiato-Red.zip
+Source23:       %{url}/releases/download/%{_gittag}/Catppuccin-Macchiato-Teal.zip
+Source24:       %{url}/releases/download/%{_gittag}/Catppuccin-Macchiato-Yellow.zip
+Source25:        %{url}/releases/download/%{_gittag}/Catppuccin-Frappe-Green.zip
+Source26:       %{url}/releases/download/%{_gittag}/Catppuccin-Frappe-Grey.zip
+# Source20:       %{url}/releases/download/%{_gittag}/Catppuccin-Frappe-Lavender.zip
+# Source27:       %{url}/releases/download/%{_gittag}/Catppuccin-Frappe-Mauve.zip
+# Source22:       %{url}/releases/download/%{_gittag}/Catppuccin-Frappe-Peach.zip
+Source27:       %{url}/releases/download/%{_gittag}/Catppuccin-Frappe-Pink.zip
+Source28:       %{url}/releases/download/%{_gittag}/Catppuccin-Frappe-Red.zip
+Source29:       %{url}/releases/download/%{_gittag}/Catppuccin-Frappe-Teal.zip
+Source30:       %{url}/releases/download/%{_gittag}/Catppuccin-Frappe-Yellow.zip
+Source31:       gnome-shell-theme.gresource.xml
 BuildArch:      noarch
-BuildRequires:  sassc
 
 %description
 Apply the Catppuccin palette to your GTK-based desktop.
@@ -157,6 +174,126 @@ Requires:       %{REQUIRES}
 %description Mocha-Yellow
 Catppuccin Mocha-Yellow GTK theme
 
+%package Macchiato
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Macchiato
+Catppuccin Macchiato GTK theme
+
+%package Macchiato-Green
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Macchiato-Green
+Catppuccin Macchiato-Green GTK theme
+
+%package Macchiato-Grey
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Macchiato-Grey
+Catppuccin Macchiato-Grey GTK theme
+
+# %package Macchiato-Lavender
+# Summary:        %{SUMMARY}
+# Requires:       %{REQUIRES}
+# %description Macchiato-Lavender
+# Catppuccin Macchiato-Lavender GTK theme
+
+%package Macchiato-Mauve
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Macchiato-Mauve
+Catppuccin Macchiato-Mauve GTK theme
+
+# %package Macchiato-Peach
+# Summary:        %{SUMMARY}
+# Requires:       %{REQUIRES}
+# %description Macchiato-Peach
+# Catppuccin Macchiato-Peach GTK theme
+
+%package Macchiato-Pink
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Macchiato-Pink
+Catppuccin Macchiato-Pink GTK theme
+
+%package Macchiato-Red
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Macchiato-Red
+Catppuccin Macchiato-Red GTK theme
+
+%package Macchiato-Teal
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Macchiato-Teal
+Catppuccin Macchiato-Teal GTK theme
+
+%package Macchiato-Yellow
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Macchiato-Yellow
+Catppuccin Macchiato-Yellow GTK theme
+
+%package Frappe
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Frappe
+Catppuccin Frappe GTK theme
+
+%package Frappe-Green
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Frappe-Green
+Catppuccin Frappe-Green GTK theme
+
+%package Frappe-Grey
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Frappe-Grey
+Catppuccin Frappe-Grey GTK theme
+
+# %package Frappe-Lavender
+# Summary:        %{SUMMARY}
+# Requires:       %{REQUIRES}
+# %description Frappe-Lavender
+# Catppuccin Frappe-Lavender GTK theme
+
+# %package Frappe-Mauve
+# Summary:        %{SUMMARY}
+# Requires:       %{REQUIRES}
+# %description Frappe-Mauve
+# Catppuccin Frappe-Mauve GTK theme
+
+# %package Frappe-Peach
+# Summary:        %{SUMMARY}
+# Requires:       %{REQUIRES}
+# %description Frappe-Peach
+# Catppuccin Frappe-Peach GTK theme
+
+%package Frappe-Pink
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Frappe-Pink
+Catppuccin Frappe-Pink GTK theme
+
+%package Frappe-Red
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Frappe-Red
+Catppuccin Frappe-Red GTK theme
+
+%package Frappe-Teal
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Frappe-Teal
+Catppuccin Frappe-Teal GTK theme
+
+%package Frappe-Yellow
+Summary:        %{SUMMARY}
+Requires:       %{REQUIRES}
+%description Frappe-Yellow
+Catppuccin Frappe-Yellow GTK theme
+
 %prep
 # (Ab)use the %setup macro and unzip all the sources cleanly.
 %setup -q -c -n %{_name}-Latte-Green
@@ -177,6 +314,24 @@ Catppuccin Mocha-Yellow GTK theme
 %setup -T -D -a 15 -q -c -n %{_name}-Mocha-Red
 %setup -T -D -a 16 -q -c -n %{_name}-Mocha-Teal
 %setup -T -D -a 17 -q -c -n %{_name}-Mocha-Yellow
+%setup -T -D -a 18 -q -c -n %{_name}-Macchiato-Green
+%setup -T -D -a 19 -q -c -n %{_name}-Macchiato-Grey
+# %setup -T -D -a 11 -q -c -n %{_name}-Macchiato-Lavender
+%setup -T -D -a 20 -q -c -n %{_name}-Macchiato-Mauve
+# %setup -T -D -a 13 -q -c -n %{_name}-Macchiato-Peach
+%setup -T -D -a 21 -q -c -n %{_name}-Macchiato-Pink
+%setup -T -D -a 22 -q -c -n %{_name}-Macchiato-Red
+%setup -T -D -a 23 -q -c -n %{_name}-Macchiato-Teal
+%setup -T -D -a 24 -q -c -n %{_name}-Macchiato-Yellow
+%setup -T -D -a 25 -q -c -n %{_name}-Frappe-Green
+%setup -T -D -a 26 -q -c -n %{_name}-Frappe-Grey
+# %setup -T -D -a 11 -q -c -n %{_name}-Frappe-Lavender
+# %setup -T -D -a 27 -q -c -n %{_name}-Frappe-Mauve
+# %setup -T -D -a 13 -q -c -n %{_name}-Frappe-Peach
+%setup -T -D -a 27 -q -c -n %{_name}-Frappe-Pink
+%setup -T -D -a 28 -q -c -n %{_name}-Frappe-Red
+%setup -T -D -a 29 -q -c -n %{_name}-Frappe-Teal
+%setup -T -D -a 30 -q -c -n %{_name}-Frappe-Yellow
 
 %build
 # no build required
@@ -204,6 +359,24 @@ cp -fr %{_builddir}/%{_name}-Mocha-Pink/* $INSTALL_DIR
 cp -fr %{_builddir}/%{_name}-Mocha-Red/* $INSTALL_DIR
 cp -fr %{_builddir}/%{_name}-Mocha-Teal/* $INSTALL_DIR
 cp -fr %{_builddir}/%{_name}-Mocha-Yellow/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Macchiato-Green/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Macchiato-Grey/* $INSTALL_DIR
+# cp -fr %{_builddir}/%{_name}-Macchiato-Lavender/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Macchiato-Mauve/* $INSTALL_DIR
+# cp -fr %{_builddir}/%{_name}-Macchiato-Peach/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Macchiato-Pink/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Macchiato-Red/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Macchiato-Teal/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Macchiato-Yellow/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Frappe-Green/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Frappe-Grey/* $INSTALL_DIR
+# cp -fr %{_builddir}/%{_name}-Frappe-Lavender/* $INSTALL_DIR
+# cp -fr %{_builddir}/%{_name}-Frappe-Mauve/* $INSTALL_DIR
+# cp -fr %{_builddir}/%{_name}-Frappe-Peach/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Frappe-Pink/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Frappe-Red/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Frappe-Teal/* $INSTALL_DIR
+cp -fr %{_builddir}/%{_name}-Frappe-Yellow/* $INSTALL_DIR
 
 # Install file that allows theme to apply to GDM
 # TODO: Obtain the source directly with %{_sourcedir} is too hacky
@@ -227,10 +400,30 @@ cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Mocha-Pink/gnome-shell/
 cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Mocha-Red/gnome-shell/
 cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Mocha-Teal/gnome-shell/
 cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Mocha-Yellow/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Macchiato-Green/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Macchiato-Grey/gnome-shell/
+# cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Macchiato-Lavender/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Macchiato-Mauve/gnome-shell/
+# cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Macchiato-Peach/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Macchiato-Pink/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Macchiato-Red/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Macchiato-Teal/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Macchiato-Yellow/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Frappe-Green/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Frappe-Grey/gnome-shell/
+# cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Frappe-Lavender/gnome-shell/
+# cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Frappe-Mauve/gnome-shell/
+# cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Frappe-Peach/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Frappe-Pink/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Frappe-Red/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Frappe-Teal/gnome-shell/
+cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Frappe-Yellow/gnome-shell/
 
 %files
 /usr/share/themes/Catppuccin-Latte-*
 /usr/share/themes/Catppuccin-Mocha-*
+/usr/share/themes/Catppuccin-Macchiato-*
+/usr/share/themes/Catppuccin-Frappe-*
 
 %files Latte
 /usr/share/themes/Catppuccin-Latte-*
@@ -289,7 +482,69 @@ cp $GDM_THEME_FILE $INSTALL_DIR/Catppuccin-Mocha-Yellow/gnome-shell/
 %files Mocha-Yellow
 /usr/share/themes/Catppuccin-Mocha-Yellow*
 
+%files Macchiato
+/usr/share/themes/Catppuccin-Macchiato-*
+
+%files Macchiato-Green
+/usr/share/themes/Catppuccin-Macchiato-Green*
+
+# %files Macchiato-Lavender
+# /usr/share/themes/Catppuccin-Macchiato-Lavender*
+
+%files Macchiato-Grey
+/usr/share/themes/Catppuccin-Macchiato-Grey*
+
+%files Macchiato-Mauve
+/usr/share/themes/Catppuccin-Macchiato-Mauve*
+
+# %files Macchiato-Peach
+# /usr/share/themes/Catppuccin-Macchiato-Peach*
+
+%files Macchiato-Pink
+/usr/share/themes/Catppuccin-Macchiato-Pink*
+
+%files Macchiato-Red
+/usr/share/themes/Catppuccin-Macchiato-Red*
+
+%files Macchiato-Teal
+/usr/share/themes/Catppuccin-Macchiato-Teal*
+
+%files Macchiato-Yellow
+/usr/share/themes/Catppuccin-Macchiato-Yellow*
+
+%files Frappe
+/usr/share/themes/Catppuccin-Frappe-*
+
+%files Frappe-Green
+/usr/share/themes/Catppuccin-Frappe-Green*
+
+# %files Frappe-Lavender
+# /usr/share/themes/Catppuccin-Frappe-Lavender*
+
+%files Frappe-Grey
+/usr/share/themes/Catppuccin-Frappe-Grey*
+
+# %files Frappe-Mauve
+# /usr/share/themes/Catppuccin-Frappe-Mauve*
+
+# %files Frappe-Peach
+# /usr/share/themes/Catppuccin-Frappe-Peach*
+
+%files Frappe-Pink
+/usr/share/themes/Catppuccin-Frappe-Pink*
+
+%files Frappe-Red
+/usr/share/themes/Catppuccin-Frappe-Red*
+
+%files Frappe-Teal
+/usr/share/themes/Catppuccin-Frappe-Teal*
+
+%files Frappe-Yellow
+/usr/share/themes/Catppuccin-Frappe-Yellow*
+
 %changelog
+* Thu Aug 11 2022 braheezy <https://github.com/braheezy/>
+- Update for new Frappe and Macchiato flavors
 * Wed Aug 3 2022 braheezy <https://github.com/braheezy/>
 - Update for new Latte and Mocha flavors
 * Sat Apr 16 2022 braheezy <https://github.com/braheezy/>
