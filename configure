@@ -2,4 +2,4 @@
 
 dnf update -y
 dnf install -y make
-dnf install -y rpm-build rpmlint rpmdevtools dnf-utils
+dnf install -y rpm-build rpmlint rpmdevtools
