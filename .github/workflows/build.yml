@@ -1,12 +1,17 @@
 name: rpm
 
 on:
+  # Let other workflows call this workflow
   workflow_call:
-    inputs:
-      upload:
-        description: Whether or not to upload the finished build
-        required: false
-        type: boolean
+  # Run on pull requests too
+  pull_request:
+    types:
+      - ready_for_review
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Cancel previous runs
+  cancel-in-progress: true
 
 jobs:
   build-job:
@@ -22,10 +27,3 @@ jobs:
 
     - name: Build
       run: make rpm
-
-    - name: Upload
-      if: inputs.upload
-      uses: actions/upload-artifact@v3
-      with:
-        name: RPMS
-        path: ./RPMS/

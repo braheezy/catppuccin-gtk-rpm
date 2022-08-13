@@ -1,9 +1,9 @@
-name: CD
+name: Add rpms to Releases
 
 on:
-  # Only run CD when a new tag is created.
+  # Only run when a new tag is created.
   push:
-    tags: "v*.*.*"
+    tags: "^(0|[1-9]\d*)\.\d*\..*"
 
 jobs:
 
@@ -13,6 +13,12 @@ jobs:
     with:
       # Remember to upload the built artifacts
       upload: true
+
+    - name: Upload
+      uses: actions/upload-artifact@v3
+      with:
+        name: RPMS
+        path: ./RPMS/
 
   # Separate job for release!
   release-job:
